@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import {
   FaHtml5,
@@ -11,184 +11,184 @@ import {
   FaPython,
   FaAndroid,
   FaBootstrap,
-} from "react-icons/fa";
-import { SiMongodb, SiNextdotjs, SiTailwindcss } from "react-icons/si";
-import { BiLogoFlutter } from "react-icons/bi";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+} from 'react-icons/fa';
+import { SiMongodb, SiNextdotjs, SiTailwindcss } from 'react-icons/si';
+import { BiLogoFlutter } from 'react-icons/bi';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/components/ui/tooltip";
-import { ScrollArea } from "@/components/ui/scroll-area";
+} from '@/components/ui/tooltip';
+import { ScrollArea } from '@/components/ui/scroll-area';
 
 const about = {
-  title: "About Me",
+  title: 'About Me',
   description:
-    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi libero distinctio porro voluptates quam autem cum sint!",
+    'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi libero distinctio porro voluptates quam autem cum sint!',
   info: [
     {
-      fieldName: "Name",
-      fieldValue: "Ziniya Ashish",
+      fieldName: 'Name',
+      fieldValue: 'Ziniya Ashish',
     },
     {
-      fieldName: "Phone",
-      fieldValue: "(+91) 9510310683",
+      fieldName: 'Phone',
+      fieldValue: '(+91) 9510310683',
     },
     {
-      fieldName: "Experience",
-      fieldValue: "3+ Months",
+      fieldName: 'Experience',
+      fieldValue: '3+ Months',
     },
     {
-      fieldName: "Nationality",
-      fieldValue: "India",
+      fieldName: 'Nationality',
+      fieldValue: 'India',
     },
     {
-      fieldName: "Email",
-      fieldValue: "ashishziniya1234@gmail.com",
+      fieldName: 'Email',
+      fieldValue: 'ashishziniya1234@gmail.com',
     },
     {
-      fieldName: "Freelance",
-      fieldValue: "Available",
+      fieldName: 'Freelance',
+      fieldValue: 'Available',
     },
     {
-      fieldName: "Language",
-      fieldValue: "English, Hindi, Gujarati",
+      fieldName: 'Language',
+      fieldValue: 'English, Hindi, Gujarati',
     },
   ],
 };
 
 const experience = {
-  icon: "/assets/resume/badge.svg",
-  title: "My Experience",
+  icon: '/assets/resume/badge.svg',
+  title: 'My Experience',
   description:
-    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi libero distinctio porro voluptates quam autem cum sint!",
+    'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi libero distinctio porro voluptates quam autem cum sint!',
   item: [
     {
-      company: "Infolabz It Services Pvt. Ltd.",
-      position: "React Js Intern",
-      duration: "01/2024 to 04/2024",
+      company: 'Infolabz It Services Pvt. Ltd.',
+      position: 'React Js Intern',
+      duration: '01/2024 to 04/2024',
     },
     {
-      company: "CreArt Solutions",
-      position: "PHP Intern",
-      duration: "07/2023 to 08/2023",
+      company: 'CreArt Solutions',
+      position: 'PHP Intern',
+      duration: '07/2023 to 08/2023',
     },
   ],
 };
 
 const education = {
-  icon: "/assets/resume/cap.svg",
-  title: "My Education",
+  icon: '/assets/resume/cap.svg',
+  title: 'My Education',
   description:
-    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi libero distinctio porro voluptates quam autem cum sint!",
+    'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi libero distinctio porro voluptates quam autem cum sint!',
   item: [
     {
-      institution: "Gujarat Technological University",
-      degree: "B.E. in Computer Engineering",
-      duration: "06/2020 to 06/2024",
+      institution: 'Gujarat Technological University',
+      degree: 'B.E. in Computer Engineering',
+      duration: '06/2020 to 06/2024',
     },
     {
-      institution: "Internship at Infolabz IT Services Pvt. Ltd.",
-      degree: "React Js Framework",
-      duration: "01/2024 to 04/2024",
+      institution: 'Internship at Infolabz IT Services Pvt. Ltd.',
+      degree: 'React Js Framework',
+      duration: '01/2024 to 04/2024',
     },
     {
-      institution: "Internship at CreArt Solutions",
-      degree: "PHP Language",
-      duration: "07/2023 to 08/2023",
+      institution: 'Internship at CreArt Solutions',
+      degree: 'PHP Language',
+      duration: '07/2023 to 08/2023',
     },
     {
-      institution: "Online Course",
-      degree: "Android App Development",
-      duration: "01/2024 to 06/2024",
+      institution: 'Online Course',
+      degree: 'Android App Development',
+      duration: '01/2024 to 06/2024',
     },
     {
-      institution: "Online Course",
-      degree: "Flutter App Development",
-      duration: "01/2024 to 06/2024",
+      institution: 'Online Course',
+      degree: 'Flutter App Development',
+      duration: '01/2024 to 06/2024',
     },
     {
-      institution: "S.N. Vidhyalaya - Surendranagar",
-      degree: "12th Science - HSC",
-      duration: "06/2018 to 03/2020",
+      institution: 'S.N. Vidhyalaya - Surendranagar',
+      degree: '12th Science - HSC',
+      duration: '06/2018 to 03/2020',
     },
     {
-      institution: "S.P. Vidhyalaya - Surendranagar",
-      degree: "10th - SSC",
-      duration: "06/2018 to 03/2020",
+      institution: 'S.P. Vidhyalaya - Surendranagar',
+      degree: '10th - SSC',
+      duration: '06/2018 to 03/2020',
     },
   ],
 };
 
 const skills = {
-  title: "My Skills",
+  title: 'My Skills',
   description:
-    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi libero distinctio porro voluptates quam autem cum sint!",
+    'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi libero distinctio porro voluptates quam autem cum sint!',
   skillset: [
     {
       icon: <FaHtml5 />,
-      name: "HTML",
+      name: 'HTML',
     },
     {
       icon: <FaCss3 />,
-      name: "CSS",
+      name: 'CSS',
     },
     {
       icon: <FaJs />,
-      name: "JavaScript",
+      name: 'JavaScript',
     },
     {
       icon: <FaReact />,
-      name: "ReactJs",
+      name: 'ReactJs',
     },
     {
       icon: <FaFigma />,
-      name: "Figma",
+      name: 'Figma',
     },
     {
       icon: <FaPhp />,
-      name: "PHP",
+      name: 'PHP',
     },
     {
       icon: <FaJava />,
-      name: "Java",
+      name: 'Java',
     },
     {
       icon: <FaPython />,
-      name: "Python",
+      name: 'Python',
     },
     {
       icon: <FaAndroid />,
-      name: "Android",
+      name: 'Android',
     },
     {
       icon: <BiLogoFlutter />,
-      name: "Flutter",
+      name: 'Flutter',
     },
     {
       icon: <SiNextdotjs />,
-      name: "Next Js",
+      name: 'Next Js',
     },
     {
       icon: <FaBootstrap />,
-      name: "Bootstrap",
+      name: 'Bootstrap',
     },
     {
       icon: <SiTailwindcss />,
-      name: "Tailwindcss",
+      name: 'Tailwindcss',
     },
     {
       icon: <SiMongodb />,
-      name: "MongoDB",
+      name: 'MongoDB',
     },
   ],
 };
 
 export default function Resume() {
   return (
-    <div className="min-h-[80vh] flex items-center justify-center py-12">
+    <div className="min-h-[80vh] items-center justify-center py-22">
       <div className="container mx-auto">
         <Tabs
           defaultValue="experience"

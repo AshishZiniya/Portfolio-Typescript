@@ -29,7 +29,7 @@ const info = [
 
 export default function Contact() {
   return (
-    <div className="py-6 min-h-screen">
+    <div className="py-12">
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row gap-8 xl:gap-[60px]">
           <div className="xl:w-[54%] order-2 xl:order-none">
