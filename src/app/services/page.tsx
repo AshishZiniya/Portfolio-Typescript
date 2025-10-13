@@ -40,7 +40,7 @@ const services: ServiceItem[] = [
 
 export default function Services() {
   return (
-    <section className="min-h-screen flex flex-col justify-center py-12 xl:py-0">
+    <section className="min-h-screen flex flex-col justify-center py-12 xl:py-8">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0 }}

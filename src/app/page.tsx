@@ -3,10 +3,18 @@ import { Button } from '@/components/ui/button';
 import { FiDownload } from 'react-icons/fi';
 import Photo from '@/components/Photo';
 import Stats from '@/components/Stats';
+import { motion } from 'framer-motion';
 
 export default function Home() {
   return (
-    <section className="min-h-screen bg-gradient-to-b from-[#0a0a0f] via-[#0a0a0f] to-[#1a1a2e]">
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{
+        opacity: 1,
+        transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
+      }}
+      className="min-h-screen bg-gradient-to-b from-[#0a0a0f] via-[#0a0a0f] to-[#1a1a2e]"
+    >
       <div className="container mx-auto h-full">
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           <div className="text-center xl:text-left order-2 xl:order-none animate-fade-in">
@@ -80,6 +88,6 @@ export default function Home() {
         </div>
       </div>
       <Stats />
-    </section>
+    </motion.section>
   );
 }
