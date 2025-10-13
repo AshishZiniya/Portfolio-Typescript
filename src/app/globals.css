@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-jetBrainsMono: 'JetBrains Mono', monospace;
+    --background: #0a0a0f;
+    --foreground: #ffffff;
+    --card: #1a1a2e;
+    --card-foreground: #ffffff;
+    --popover: #1a1a2e;
+    --popover-foreground: #ffffff;
+    --primary: #0a0a0f;
+    --primary-foreground: #ffffff;
+    --secondary: #1a1a2e;
+    --secondary-foreground: #ffffff;
+    --muted: #334155;
+    --muted-foreground: #64748b;
+    --accent: #00d4ff;
+    --accent-foreground: #0a0a0f;
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+    --border: #334155;
+    --input: #334155;
+    --ring: #00d4ff;
+    --radius: 0.5rem;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-jetBrainsMono);
+    background-color: #0a0a0f;
+    @apply text-white leading-loose;
+    overflow-x: hidden;
+  }
+
+  /* Prevent layout shift during select interactions */
+  [data-radix-select-viewport] {
+    position: relative !important;
+    z-index: 9999 !important;
+  }
+
+  [data-radix-select-content] {
+    position: fixed !important;
+    z-index: 9999 !important;
+  }
+
+  .h1 {
+    @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold;
+  }
+
+  .h2 {
+    @apply text-[36px] xl:text-[48px] leading-[1.1] font-semibold;
+  }
+
+  .h3 {
+    @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
+  }
+
+  .text-outline {
+    -webkit-text-stroke: 1px #ffffff;
+  }
+
+  .text-outline-hover {
+    -webkit-text-stroke: 1px #00ff99;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.8s ease-out forwards;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .glass-effect {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .gradient-border {
+    position: relative;
+    background: linear-gradient(45deg, transparent, rgba(0, 212, 255, 0.1), transparent);
+    border-radius: 8px;
+  }
+
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    background: linear-gradient(45deg, #00d4ff, #00b8e6, #00d4ff);
+    border-radius: 8px;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+  }
+}
