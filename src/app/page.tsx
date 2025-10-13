@@ -1,3 +1,5 @@
+"use client";
+
 import Socials from '@/components/Socials';
 import { Button } from '@/components/ui/button';
 import { FiDownload } from 'react-icons/fi';
