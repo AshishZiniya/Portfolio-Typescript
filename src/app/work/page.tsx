@@ -17,7 +17,6 @@ interface Project {
   num: string;
   categories: string;
   title: string;
-  description: string;
   stack: { name: string }[];
   image: string;
   live?: string;
@@ -27,37 +26,22 @@ interface Project {
 const projects: Project[] = [
   {
     num: '01',
-    categories: 'Full-Stack',
-    title: 'Project 1',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut magnam eaque libero non, tempore sit autem inventore.',
+    categories: 'Frontend',
+    title: 'Project 1 :- Portfolio',
     stack: [
-      { name: 'ReactJs' },
-      { name: 'MongoDB' },
-      { name: 'NodeJs' },
-      { name: 'ExpressJs' },
+      { name: 'NextJs' },
+      { name: 'TailwindCSS' },
+      { name: 'TypeScript' },
+      { name: 'Framer-Motion' },
     ],
-    image: '/assets/work/thumb1.png',
-    live: 'https://www.eonicindia.in/',
-    github: 'https://github.com/AshishZiniya/EonicIndia',
+    image: '',
+    live: 'https://portfolio-typescript-iota.vercel.app/',
+    github: 'https://github.com/AshishZiniya/Portfolio-Typescript.git',
   },
   {
     num: '02',
-    categories: 'Frontend',
-    title: 'Project 2',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut magnam eaque libero non, tempore sit autem inventore.',
-    stack: [{ name: 'NextJs' }, { name: 'TailwindCSS' }],
-    image: '/assets/work/thumb2.png',
-    live: 'https://ashish-portfolio-xi.vercel.app/',
-    github: 'https://github.com/AshishZiniya/Portfolio',
-  },
-  {
-    num: '03',
     categories: 'Full-Stack',
-    title: 'Project 3',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut magnam eaque libero non, tempore sit autem inventore.',
+    title: 'Project 2 :- Book E-Commerce',
     stack: [
       { name: 'ReactJs' },
       { name: 'TailwindCSS' },
@@ -67,6 +51,24 @@ const projects: Project[] = [
     image: '/assets/work/thumb3.png',
     live: 'https://book-house-fi.vercel.app/',
     github: 'https://github.com/AshishZiniya/book-store',
+  },
+  {
+    num: '03',
+    categories: 'Full-Stack',
+    title: 'Project 2 :- Spotem - Ai Camera Alert Detection',
+    stack: [
+      { name: 'NextJs' },
+      { name: 'TailwindCSS' },
+      { name: 'typeScript' },
+      { name: 'NodeJs' },
+      { name: 'REST API' },
+      { name: '.Net' },
+      { name: 'AI' },
+      { name: 'Machine Learning' },
+    ],
+    image: '/assets/work/thumb3.png',
+    live: 'https://spotem.ai/',
+    github: '',
   },
 ];
 
@@ -90,7 +92,6 @@ export default function Work() {
               <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
                 {project.categories} Project
               </h2>
-              <p className="text-white/60">{project.description}</p>
               <ul className="flex gap-4">
                 {project.stack.map((item, index) => (
                   <li key={index} className="text-xl text-accent">

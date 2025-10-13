@@ -6,13 +6,18 @@ import {
   FaJs,
   FaReact,
   FaFigma,
-  FaPhp,
-  FaJava,
-  FaPython,
-  FaAndroid,
-  FaBootstrap,
+  FaNodeJs,
 } from 'react-icons/fa';
-import { SiMongodb, SiNextdotjs, SiTailwindcss } from 'react-icons/si';
+import {
+  SiMongodb,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiPostgresql,
+  SiNestjs,
+  SiExpress,
+  SiSwagger,
+  SiPostman,
+} from 'react-icons/si';
 import { BiLogoFlutter } from 'react-icons/bi';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import {
@@ -25,8 +30,6 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 
 const about = {
   title: 'About Me',
-  description:
-    'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi libero distinctio porro voluptates quam autem cum sint!',
   info: [
     {
       fieldName: 'Name',
@@ -38,7 +41,7 @@ const about = {
     },
     {
       fieldName: 'Experience',
-      fieldValue: '3+ Months',
+      fieldValue: '10+ Months',
     },
     {
       fieldName: 'Nationality',
@@ -47,10 +50,6 @@ const about = {
     {
       fieldName: 'Email',
       fieldValue: 'ashishziniya1234@gmail.com',
-    },
-    {
-      fieldName: 'Freelance',
-      fieldValue: 'Available',
     },
     {
       fieldName: 'Language',
@@ -62,18 +61,16 @@ const about = {
 const experience = {
   icon: '/assets/resume/badge.svg',
   title: 'My Experience',
-  description:
-    'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi libero distinctio porro voluptates quam autem cum sint!',
   item: [
+    {
+      company: 'WebClues Infotech - A CMMI Level 5 Certified Company',
+      position: 'Developer Trainee',
+      duration: '04/2025 to Present',
+    },
     {
       company: 'Infolabz It Services Pvt. Ltd.',
       position: 'React Js Intern',
       duration: '01/2024 to 04/2024',
-    },
-    {
-      company: 'CreArt Solutions',
-      position: 'PHP Intern',
-      duration: '07/2023 to 08/2023',
     },
   ],
 };
@@ -81,13 +78,11 @@ const experience = {
 const education = {
   icon: '/assets/resume/cap.svg',
   title: 'My Education',
-  description:
-    'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi libero distinctio porro voluptates quam autem cum sint!',
   item: [
     {
-      institution: 'Gujarat Technological University',
-      degree: 'B.E. in Computer Engineering',
-      duration: '06/2020 to 06/2024',
+      institution: 'WebClues Infotech - A CMMI Level 5 Certified Company',
+      degree: 'MERN Stack Developer',
+      duration: '04/2025 to Present',
     },
     {
       institution: 'Internship at Infolabz IT Services Pvt. Ltd.',
@@ -95,37 +90,15 @@ const education = {
       duration: '01/2024 to 04/2024',
     },
     {
-      institution: 'Internship at CreArt Solutions',
-      degree: 'PHP Language',
-      duration: '07/2023 to 08/2023',
-    },
-    {
-      institution: 'Online Course',
-      degree: 'Android App Development',
-      duration: '01/2024 to 06/2024',
-    },
-    {
-      institution: 'Online Course',
-      degree: 'Flutter App Development',
-      duration: '01/2024 to 06/2024',
-    },
-    {
-      institution: 'S.N. Vidhyalaya - Surendranagar',
-      degree: '12th Science - HSC',
-      duration: '06/2018 to 03/2020',
-    },
-    {
-      institution: 'S.P. Vidhyalaya - Surendranagar',
-      degree: '10th - SSC',
-      duration: '06/2018 to 03/2020',
+      institution: 'Gujarat Technological University',
+      degree: 'B.E. in Computer Engineering',
+      duration: '06/2020 to 06/2024',
     },
   ],
 };
 
 const skills = {
   title: 'My Skills',
-  description:
-    'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi libero distinctio porro voluptates quam autem cum sint!',
   skillset: [
     {
       icon: <FaHtml5 />,
@@ -144,36 +117,20 @@ const skills = {
       name: 'ReactJs',
     },
     {
-      icon: <FaFigma />,
-      name: 'Figma',
+      icon: <FaNodeJs />,
+      name: 'Node Js',
     },
     {
-      icon: <FaPhp />,
-      name: 'PHP',
-    },
-    {
-      icon: <FaJava />,
-      name: 'Java',
-    },
-    {
-      icon: <FaPython />,
-      name: 'Python',
-    },
-    {
-      icon: <FaAndroid />,
-      name: 'Android',
-    },
-    {
-      icon: <BiLogoFlutter />,
-      name: 'Flutter',
+      icon: <SiExpress/>,
+      name: 'Express Js',
     },
     {
       icon: <SiNextdotjs />,
       name: 'Next Js',
     },
     {
-      icon: <FaBootstrap />,
-      name: 'Bootstrap',
+      icon: <FaFigma />,
+      name: 'Figma',
     },
     {
       icon: <SiTailwindcss />,
@@ -183,6 +140,23 @@ const skills = {
       icon: <SiMongodb />,
       name: 'MongoDB',
     },
+    {
+      icon: <SiPostgresql />,
+      name: 'PostgreSQL',
+    },
+    {
+      icon: <SiNestjs />,
+      name: 'Nest Js',
+    },
+    {
+      icon: <SiSwagger/>,
+      name: 'Swagger',
+    },
+    {
+      icon : <SiPostman/>,
+      name : 'Postman',
+    },
+    
   ],
 };
 
@@ -194,20 +168,17 @@ export default function Resume() {
           defaultValue="experience"
           className="flex flex-col xl:flex-row gap-[60px]"
         >
-          <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
+          <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6 py-14">
             <TabsTrigger value="experience">Experience</TabsTrigger>
             <TabsTrigger value="education">Education</TabsTrigger>
             <TabsTrigger value="skills">Skills</TabsTrigger>
             <TabsTrigger value="about">About Me</TabsTrigger>
           </TabsList>
 
-          <div className="min-h-[70vh] w-full">
+          <div className="min-h-[70vh] w-full -translate-12 -translate-x-16">
             <TabsContent value="experience" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{experience.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
-                  {experience.description}
-                </p>
                 <ScrollArea className="h-[400px]">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {experience.item.map((item, index) => {
@@ -235,9 +206,6 @@ export default function Resume() {
             <TabsContent value="education" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{education.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
-                  {education.description}
-                </p>
                 <ScrollArea className="h-[400px]">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {education.item.map((item, index) => {
@@ -247,11 +215,11 @@ export default function Resume() {
                           className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
                         >
                           <span className="text-accent">{item.duration}</span>
-                          <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
+                          <h3 className="text-xl max-w-[360px] min-h-[40px] lg:text-left">
                             {item.degree}
                           </h3>
                           <div className="flex items-center gap-3">
-                            <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
+                            <span className="w-[6px] h-[6px] rounded-full bg-white"></span>
                             <p className="text-white/60">{item.institution}</p>
                           </div>
                         </li>
@@ -262,13 +230,10 @@ export default function Resume() {
               </div>
             </TabsContent>
 
-            <TabsContent value="skills" className="w-full h-full">
+            <TabsContent value="skills" className="h-[65vh] overflow-y-scroll">
               <div className="flex flex-col gap-[30px]">
                 <div className="flex flex-col gap-[30px] text-center xl:text-left">
                   <h3 className="text-4xl font-bold">{skills.title}</h3>
-                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
-                    {skills.description}
-                  </p>
                 </div>
                 <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:gap-[30px]">
                   {skills.skillset.map((skill, index) => {
@@ -299,10 +264,7 @@ export default function Resume() {
             >
               <div className="flex flex-col gap-[30px]">
                 <h3 className="text-4xl font-bold">{about.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
-                  {about.description}
-                </p>
-                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
+                <ul className="grid grid-cols-1 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
                   {about.info.map((item, index) => {
                     return (
                       <li
