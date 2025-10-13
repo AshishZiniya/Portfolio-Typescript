@@ -188,7 +188,7 @@ const skills = {
 
 export default function Resume() {
   return (
-    <div className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0">
+    <div className="min-h-[80vh] flex items-center justify-center py-12">
       <div className="container mx-auto">
         <Tabs
           defaultValue="experience"
