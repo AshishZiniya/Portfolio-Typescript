@@ -20,6 +20,21 @@ const services: ServiceItem[] = [
     title: 'Frontend Development',
     href: '',
   },
+  {
+    num: '03',
+    title: 'Backend Development',
+    href: '',
+  },
+  {
+    num: '04',
+    title: 'Database Management',
+    href: '',
+  },
+  {
+    num: '05',
+    title: 'API Development',
+    href: '',
+  },
 ];
 
 export default function Services() {
@@ -44,7 +59,7 @@ export default function Services() {
                     group-hover:bg-accent transition-all duration-500 flex
                     justify-center items-center hover:-rotate-45 shadow-lg"
                   >
-                    <BsArrowDownRight className="text-primary text-2xl" />
+                    <BsArrowDownRight className="text-primary text-2xl text-black" />
                   </Link>
                 </div>
                 <div className="flex flex-col gap-4">
