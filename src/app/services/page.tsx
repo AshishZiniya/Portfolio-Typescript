@@ -39,18 +39,18 @@ const services: ServiceItem[] = [
 
 export default function Services() {
   return (
-    <section className="min-h-screen flex flex-col py-12 xl:py-8">
+    <section className="max-h-[89vh] flex flex-col py-12 xl:py-8 overflow-y-scroll scroll-container bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16">
           {services.map((service, index) => {
             return (
               <div
                 key={index}
-                className="flex-1 flex flex-col justify-start gap-8 group p-8 bg-[#27272c] rounded-xl hover:bg-[#2a2a2e] transition-all duration-300"
+                className="flex-1 flex flex-col justify-start gap-8 group p-8 bg-[#d1d1d1] rounded-xl hover:bg-[#e5e5e5] transition-all duration-300 shadow-sm"
               >
                 {/* Top */}
                 <div className="w-full flex justify-between items-start">
-                  <div className="text-6xl font-extrabold text-outline text-transparent group-hover:text-outline-hover transition-all duration-500">
+                  <div className="text-6xl font-extrabold text-black group-hover:text-outline-hover transition-all duration-500">
                     {service.num}
                   </div>
                   <Link
@@ -63,11 +63,11 @@ export default function Services() {
                   </Link>
                 </div>
                 <div className="flex flex-col gap-4">
-                  <h2 className="text-3xl font-bold leading-tight text-white group-hover:text-accent transition-all duration-500">
+                  <h2 className="text-3xl font-bold leading-tight text-black group-hover:text-[#6366f1] transition-all duration-500">
                     {service.title}
                   </h2>
                 </div>
-                <div className="border-b border-white/10 w-full mt-4"></div>
+                <div className="border-b border-[#cccccc] w-full mt-4"></div>
               </div>
             );
           })}

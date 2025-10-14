@@ -32,8 +32,8 @@ export default function Socials({ containerstyles, iconstyles }: SocialsProps) {
             className={`${iconstyles} group relative hover:scale-110`}
             title={`Visit ${item.icon.name.replace('Fa', '').toLowerCase()}`}
           >
-            <div className="absolute inset-0 bg-[#00d4ff]/20 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300"></div>
-            <item.icon className="relative z-10" />
+            <div className="absolute inset-0 bg-[#6366f1]/20 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+            <item.icon className="relative z-10 text-black/80 group-hover:text-white" />
           </a>
         );
       })}

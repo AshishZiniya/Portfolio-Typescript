@@ -27,13 +27,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${jetBrainsMono.variable}`}>
+      <body className={`${jetBrainsMono.variable} overflow-y-scroll scroll-container bg-white`}>
         <Analytics />
         <NextTopLoader
-          color="#2299DD"
+          color="#1864de"
           initialPosition={0.08}
           crawlSpeed={200}
-          height={3}
+          height={5}
           crawl={true}
           showSpinner={false}
           easing="ease"

@@ -161,13 +161,13 @@ const skills = {
 
 export default function Resume() {
   return (
-    <div className="min-h-[80vh] items-center justify-center py-22">
+    <div className="min-h-[80vh] items-center justify-center py-22 bg-white">
       <div className="container mx-auto">
         <Tabs
           defaultValue="experience"
           className="flex flex-col xl:flex-row gap-[60px]"
         >
-          <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6 py-14">
+          <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6 py-14 text-black">
             <TabsTrigger value="experience">Experience</TabsTrigger>
             <TabsTrigger value="education">Education</TabsTrigger>
             <TabsTrigger value="skills">Skills</TabsTrigger>
@@ -177,22 +177,22 @@ export default function Resume() {
           <div className="min-h-[70vh] w-full -translate-12 -translate-x-16">
             <TabsContent value="experience" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-bold">{experience.title}</h3>
-                <ScrollArea className="h-[400px]">
+                <h3 className="text-4xl font-bold text-black">{experience.title}</h3>
+                <ScrollArea className="h-[400px] scroll-container">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {experience.item.map((item, index) => {
                       return (
                         <li
                           key={index}
-                          className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                          className="bg-[#d1d1d1]/80 h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1 shadow-sm"
                         >
-                          <span className="text-accent">{item.duration}</span>
-                          <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
+                          <span className="text-[#6366f1] font-semibold">{item.duration}</span>
+                          <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left text-black font-semibold">
                             {item.position}
                           </h3>
                           <div className="flex items-center gap-3">
-                            <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-                            <p className="text-white/60">{item.company}</p>
+                            <span className="w-[6px] h-[6px] rounded-full bg-[#6366f1]"></span>
+                            <p className="text-black/70">{item.company}</p>
                           </div>
                         </li>
                       );
@@ -204,22 +204,22 @@ export default function Resume() {
 
             <TabsContent value="education" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-bold">{education.title}</h3>
-                <ScrollArea className="h-[400px]">
+                <h3 className="text-4xl font-bold text-black">{education.title}</h3>
+                <ScrollArea className="h-[400px] scroll-container">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {education.item.map((item, index) => {
                       return (
                         <li
                           key={index}
-                          className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                          className="bg-[#d1d1d1]/80 h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1 shadow-sm"
                         >
-                          <span className="text-accent">{item.duration}</span>
-                          <h3 className="text-xl max-w-[360px] min-h-[40px] lg:text-left">
+                          <span className="text-[#6366f1] font-semibold">{item.duration}</span>
+                          <h3 className="text-xl max-w-[360px] min-h-[40px] lg:text-left text-black font-semibold">
                             {item.degree}
                           </h3>
                           <div className="flex items-center gap-3">
-                            <span className="w-[6px] h-[6px] rounded-full bg-white"></span>
-                            <p className="text-white/60">{item.institution}</p>
+                            <span className="w-[6px] h-[6px] rounded-full bg-[#6366f1]"></span>
+                            <p className="text-black/70">{item.institution}</p>
                           </div>
                         </li>
                       );
@@ -229,10 +229,10 @@ export default function Resume() {
               </div>
             </TabsContent>
 
-            <TabsContent value="skills" className="h-[65vh] overflow-y-scroll">
+            <TabsContent value="skills" className="h-[65vh] overflow-y-scroll scroll-container">
               <div className="flex flex-col gap-[30px]">
                 <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                  <h3 className="text-4xl font-bold">{skills.title}</h3>
+                  <h3 className="text-4xl font-bold text-black">{skills.title}</h3>
                 </div>
                 <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:gap-[30px]">
                   {skills.skillset.map((skill, index) => {
@@ -240,12 +240,12 @@ export default function Resume() {
                       <li key={index}>
                         <TooltipProvider delayDuration={100}>
                           <Tooltip>
-                            <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center gap-4 items-center group">
-                              <div className="text-6xl group-hover:text-accent transition-all duration-300">
+                            <TooltipTrigger className="w-full h-[150px] bg-[#d1d1d1]/80 rounded-xl flex justify-center gap-4 items-center group shadow-sm">
+                              <div className="text-6xl text-black/80 group-hover:text-[#6366f1] transition-all duration-300">
                                 {skill.icon}
                               </div>
                             </TooltipTrigger>
-                            <TooltipContent>
+                            <TooltipContent className='text-black'>
                               <p className="capitalize">{skill.name}</p>
                             </TooltipContent>
                           </Tooltip>
@@ -262,7 +262,7 @@ export default function Resume() {
               className="w-full text-center xl:text-left"
             >
               <div className="flex flex-col gap-[30px]">
-                <h3 className="text-4xl font-bold">{about.title}</h3>
+                <h3 className="text-4xl font-bold text-black">{about.title}</h3>
                 <ul className="grid grid-cols-1 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
                   {about.info.map((item, index) => {
                     return (
@@ -270,10 +270,10 @@ export default function Resume() {
                         key={index}
                         className="flex items-center justify-center xl:justify-start gap-4"
                       >
-                        <span className="text-white/60">
+                        <span className="text-black/70 font-medium">
                           {item.fieldName}:-
                         </span>
-                        <span className="text-xl">{item.fieldValue}</span>
+                        <span className="text-xl text-black font-semibold">{item.fieldValue}</span>
                       </li>
                     );
                   })}

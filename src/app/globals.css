@@ -3,25 +3,25 @@
 @layer base {
   :root {
     --font-jetBrainsMono: 'JetBrains Mono', monospace;
-    --background: #0a0a0f;
-    --foreground: #ffffff;
-    --card: #1a1a2e;
-    --card-foreground: #ffffff;
-    --popover: #1a1a2e;
-    --popover-foreground: #ffffff;
-    --primary: #0a0a0f;
-    --primary-foreground: #ffffff;
-    --secondary: #1a1a2e;
-    --secondary-foreground: #ffffff;
-    --muted: #334155;
-    --muted-foreground: #64748b;
-    --accent: #00d4ff;
-    --accent-foreground: #0a0a0f;
+    --background: #e5e5e5;
+    --foreground: #000000;
+    --card: #d1d1d1;
+    --card-foreground: #000000;
+    --popover: #d1d1d1;
+    --popover-foreground: #000000;
+    --primary: #f3f3f3;
+    --primary-foreground: #000000;
+    --secondary: #a3a3a3;
+    --secondary-foreground: #000000;
+    --muted: #aaaaaa;
+    --muted-foreground: #6b6b6b;
+    --accent: #6366f1;
+    --accent-foreground: #ffffff;
     --destructive: #ef4444;
     --destructive-foreground: #ffffff;
-    --border: #334155;
-    --input: #334155;
-    --ring: #00d4ff;
+    --border: #cccccc;
+    --input: #e5e5e5;
+    --ring: #6366f1;
     --radius: 0.5rem;
   }
 
@@ -31,6 +31,16 @@
 
   html {
     scroll-behavior: smooth;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    overflow: -moz-scrollbars-none; /* Firefox old */
+  }
+
+  html::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+    width: 0px;
+    height: 0px;
+    background: transparent;
   }
 
   body {
@@ -38,6 +48,16 @@
     background-color: #0a0a0f;
     @apply text-white leading-loose;
     overflow-x: hidden;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    overflow: -moz-scrollbars-none; /* Firefox old */
+  }
+
+  body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+    width: 0px;
+    height: 0px;
+    background: transparent;
   }
 
   /* Prevent layout shift during select interactions */
@@ -138,4 +158,17 @@
     mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     mask-composite: exclude;
   }
+}
+
+.scroll-container {
+  scrollbar-width: none;    /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  overflow: -moz-scrollbars-none; /* Firefox old */
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+  width: 0px;
+  height: 0px;
+  background: transparent;
 }
