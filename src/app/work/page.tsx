@@ -41,8 +41,22 @@ const projects: Project[] = [
   },
   {
     num: '02',
+    categories: 'Frontend',
+    title: 'Project 2 :- Project Management Dashboard',
+    stack: [
+      { name: 'NextJs' },
+      { name: 'TailwindCSS' },
+      { name: 'TypeScript' },
+      { name: 'Framer-Motion' },
+    ],
+    image: '/assets/desktop4.png',
+    live: 'https://project-app-indol.vercel.app',
+    github: 'https://github.com/AshishZiniya/ProjectApp.git',
+  },
+  {
+    num: '03',
     categories: 'Full-Stack',
-    title: 'Project 2 :- Book E-Commerce',
+    title: 'Project 3 :- Book E-Commerce',
     stack: [
       { name: 'ReactJs' },
       { name: 'TailwindCSS' },
@@ -50,13 +64,13 @@ const projects: Project[] = [
       { name: 'JSON' },
     ],
     image: '/assets/desktop2.png',
-    live: 'https://book-house-fi.vercel.app/',
-    github: 'https://github.com/AshishZiniya/book-store',
+    live: 'https://book-store-nextjs-alpha.vercel.app',
+    github: 'https://github.com/AshishZiniya/book-store-nextjs.git',
   },
   {
-    num: '03',
+    num: '04',
     categories: 'Full-Stack',
-    title: 'Project 3 :- Spotem - Ai Camera Alert Detection',
+    title: 'Project 4 :- Spotem - Ai Camera Alert Detection',
     stack: [
       { name: 'NextJs' },
       { name: 'TailwindCSS' },
@@ -153,7 +167,7 @@ export default function Work() {
                       <Image
                         src={project.image}
                         fill
-                        className="flex object-cover duration-500"
+                        className="flex object-cover duration-500 border border-[#cccccc] shadow-lg rounded-lg"
                         alt={project.title}
                       />
                     </div>
